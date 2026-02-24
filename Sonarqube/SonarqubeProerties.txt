@@ -1,0 +1,132 @@
+========================================
+GENERIC PROJECT (CLI)
+
+sonar.projectKey=my-project-key
+sonar.projectName=My Project
+sonar.projectVersion=1.0
+
+sonar.sources=src
+sonar.tests=src/test
+
+sonar.sourceEncoding=UTF-8
+
+sonar.exclusions=/node_modules/,/build/,/dist/
+
+sonar.host.url=http://localhost:9000
+
+sonar.login=YOUR_SONAR_TOKEN
+
+========================================
+MAVEN (JAVA) – CLI USAGE
+
+sonar.projectKey=my-java-maven-project
+sonar.projectName=Java Maven Project
+sonar.projectVersion=1.0
+
+sonar.sources=src/main/java
+sonar.tests=src/test/java
+
+sonar.java.binaries=target/classes
+
+sonar.junit.reportPaths=target/surefire-reports
+sonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
+
+sonar.sourceEncoding=UTF-8
+
+sonar.host.url=http://localhost:9000
+
+sonar.login=YOUR_SONAR_TOKEN
+
+========================================
+GRADLE (JAVA) – CLI USAGE
+
+sonar.projectKey=my-java-gradle-project
+sonar.projectName=Java Gradle Project
+sonar.projectVersion=1.0
+
+sonar.sources=src/main/java
+sonar.tests=src/test/java
+
+sonar.java.binaries=build/classes
+
+sonar.coverage.jacoco.xmlReportPaths=build/reports/jacoco/test/jacocoTestReport.xml
+
+sonar.sourceEncoding=UTF-8
+
+sonar.host.url=http://localhost:9000
+
+sonar.login=YOUR_SONAR_TOKEN
+
+========================================
+NODEJS / JAVASCRIPT
+
+sonar.projectKey=my-node-project
+sonar.projectName=NodeJS Project
+sonar.projectVersion=1.0
+
+sonar.sources=src
+sonar.tests=tests
+
+sonar.exclusions=/node_modules/,/dist/
+
+sonar.javascript.lcov.reportPaths=coverage/lcov.info
+
+sonar.sourceEncoding=UTF-8
+
+sonar.host.url=http://localhost:9000
+
+sonar.login=YOUR_SONAR_TOKEN
+
+========================================
+FULL STACK (JAVA + NODE)
+
+sonar.projectKey=my-fullstack-app
+sonar.projectName=FullStack App
+sonar.projectVersion=1.0
+
+sonar.sources=backend/src,frontend/src
+
+sonar.java.binaries=backend/target/classes
+
+sonar.exclusions=/node_modules/,/dist/
+
+sonar.javascript.lcov.reportPaths=frontend/coverage/lcov.info
+sonar.coverage.jacoco.xmlReportPaths=backend/target/site/jacoco/jacoco.xml
+
+sonar.sourceEncoding=UTF-8
+
+sonar.host.url=http://localhost:9000
+
+sonar.login=YOUR_SONAR_TOKEN
+
+========================================
+DOTNET (ONLY IF USING GENERIC SCANNER – NOT RECOMMENDED)
+
+sonar.projectKey=my-dotnet-project
+sonar.projectName=My DotNet Project
+sonar.projectVersion=1.0
+
+sonar.sources=.
+sonar.exclusions=/bin/,/obj/
+
+sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml
+
+sonar.sourceEncoding=UTF-8
+
+sonar.host.url=http://localhost:9000
+
+sonar.login=YOUR_SONAR_TOKEN
+
+========================================
+NOTE FOR DOTNET (RECOMMENDED METHOD)
+
+For .NET projects, use:
+
+dotnet sonarscanner begin
+dotnet build
+dotnet test
+dotnet sonarscanner end
+
+Instead of sonar-project.properties.
+
+========================================
